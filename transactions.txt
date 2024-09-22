@@ -1,4 +1,3 @@
-Transaction ID: T001, Transaction Date: Fri Sep 20 11:17:44 MYT 2024, Amount: RM5.00
-Transaction ID: T002, Transaction Date: Fri Sep 20 11:19:12 MYT 2024, Amount: RM12.00
-Transaction ID: T003, Transaction Date: Sat Sep 21 09:09:26 MYT 2024, Amount: RM5.60
-Transaction ID: T004, Transaction Date: Sat Sep 21 09:11:54 MYT 2024, Amount: RM12.00
+Transaction ID: T001, Transaction Date: Sun Sep 22 17:29:25 MYT 2024, Amount: RM5.00, Payment Method: Credit Card
+Transaction ID: T002, Transaction Date: Sun Sep 22 17:29:37 MYT 2024, Amount: RM5.60, Payment Method: Credit Card
+Transaction ID: T003, Transaction Date: Sun Sep 22 17:33:23 MYT 2024, Amount: RM12.00, Payment Method: Credit Card
