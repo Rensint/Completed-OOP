@@ -132,10 +132,9 @@ public class Staff {
                         System.out.print("Enter Shift Name: ");
                         String shiftName = scanner.nextLine();
                         System.out.print("Enter Start Time: ");
-                        int startTime = scanner.nextInt();
+                        String startTime = scanner.nextLine();
                         System.out.print("Enter End Time: ");
-                        int endTime = scanner.nextInt();
-                        scanner.nextLine(); // Clear the buffer
+                        String endTime = scanner.nextLine();
 
                         Shift shift = new Shift(shiftID, shiftName, startTime, endTime);
                         s.assignShift(shift);
