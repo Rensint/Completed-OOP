@@ -502,12 +502,7 @@ public class Product {
 		}
     	
     }
-    
-    public double calculateTotalProductPrice(String productID, int productQuantity, double productPrice){
-    	double totalProductPrice = 0.0;
-    	return totalProductPrice;
-    }
-    
+
     private boolean validateID(String inputProductID, String category){
     	switch(category){
     		case "Stationary":
