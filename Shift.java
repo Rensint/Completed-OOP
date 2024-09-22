@@ -1,16 +1,15 @@
 public class Shift {
     private String shiftID;
     private String shiftName;
-    private int startTime;
-    private int endTime;
+    private String startTime;
+    private String endTime;   
 
-    public Shift(String shiftID, String shiftName, int startTime, int endTime) {
+    public Shift(String shiftID, String shiftName, String startTime, String endTime) {
         this.shiftID = shiftID;
         this.shiftName = shiftName;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        setStartTime(startTime);
+        setEndTime(endTime);    
     }
-
 
     public String getShiftID() {
         return shiftID;
@@ -28,20 +27,33 @@ public class Shift {
         this.shiftName = shiftName;
     }
 
-    public int getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(int startTime) {
+    public void setStartTime(String startTime) {
+    if (isValidTime(startTime)) {
         this.startTime = startTime;
+    } else {
+        throw new IllegalArgumentException("Invalid start time format. Please use HH:mm format.");
     }
+}
 
-    public int getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(int endTime) {
+    public void setEndTime(String endTime) {
+    if (isValidTime(endTime)) {
         this.endTime = endTime;
+    } else {
+        throw new IllegalArgumentException("Invalid end time format. Please use HH:mm format.");
+    }
+}
+
+
+    private boolean isValidTime(String time) {
+        return time.matches("^([01]\\d|2[0-3]):([0-5]\\d)$");
     }
 
  
@@ -49,29 +61,25 @@ public class Shift {
 
         System.out.println("Shift added: " + shift.toString());
     }
-	
- 
+
+
     public void removeShift(Shift shift) {
-     
         System.out.println("Shift removed: " + shift.toString());
     }
 
-    
+
     public void updateProduct(Product product) {
-    
         System.out.println("Product updated for shift: " + product.toString());
     }
 
-    
+ 
     public Shift finishShiftById(String shiftID) {
         if (this.shiftID == shiftID) {
             System.out.println("Shift finished: " + this.toString());
             return this;
         }
-        return null;
+        return null; 
     }
-
-
     @Override
     public String toString() {
         return "ShiftID: " + shiftID +
@@ -80,3 +88,4 @@ public class Shift {
                 ", EndTime: " + endTime;
     }
 }
+
